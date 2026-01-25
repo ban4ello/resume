@@ -311,7 +311,7 @@ export default {
       ],
       typeValue: '',
       typeStatus: false,
-      displayTextArray: ['person who loves programming...', 'creator...', 'Vue frontend developer.'],
+      displayTextArray: ['person who loves programming...', 'creator...', 'Web-app developer.'],
       typingSpeed: 90,
       erasingSpeed: 30,
       newTextDelay: 1500,
