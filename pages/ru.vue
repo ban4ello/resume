@@ -37,7 +37,7 @@
           <div class="d-flex justify-center gap-50">
             <div id="summary" class="d-flex flex-column justify-center">
               <h3 class="text-title bold mb-4">
-                Ivan Miroshnichenko
+                Иван Мирошниченко
               </h3>
 
               <p class="font-size-large">
@@ -68,7 +68,7 @@
 
               <ShadowRoundBtn
                 v-if="!showActivateBtn && (screen !== 'sm' && screen !== 'xs')"
-                btn-text="Нажми для фана"
+                btn-text="Не нажимать ! 😉"
                 @click="activateBomb()"
               />
               <ShadowRoundBtn
@@ -304,7 +304,7 @@ export default {
           year: 'сен 2020 — окт 2022',
           experience: {
             title: 'EventScouts',
-            text: 'Децентрализованное приложение для поиска событий (Web 3.0).',
+            text: 'Децентрализованное приложение для поиска мероприятий (Web 3.0).',
             responsibilities: [
               'разработка интерфейса на Vue.js + Vuetify по макетам Figma',
               'разработка mobile‑first',
@@ -374,7 +374,7 @@ export default {
       ],
       typeValue: '',
       typeStatus: false,
-      displayTextArray: ['человек, который любит программирование...', 'создатель...', 'Web‑app разработчик.'],
+      displayTextArray: ['тот кто любит программировать...', 'творец...', 'Разработчик Веб-приложений.'],
       typingSpeed: 90,
       erasingSpeed: 30,
       newTextDelay: 1500,
@@ -408,7 +408,7 @@ export default {
         {
           hid: 'og:site_name',
           property: 'og:site_name',
-          content: 'Ivan Miroshnichenko'
+          content: 'Иван Мирошниченко'
         },
         {
           hid: 'og:type',
