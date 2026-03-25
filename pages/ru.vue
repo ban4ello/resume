@@ -4,14 +4,14 @@
       <div class="typeWiriter">
         <div class="d-flex start-flex">
           <h1>
-            Hi everyone! I'm a
+            Привет! Я
             <span class="typed-text" :class="{ lightMode }">{{ typeValue }}</span>
             <span class="blinking-cursor">|</span>
             <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
           </h1>
           <div class="lang-switch">
-            <nuxt-link class="lang-link" to="/ru">
-              RU
+            <nuxt-link class="lang-link" to="/">
+              EN
             </nuxt-link>
           </div>
         </div>
@@ -24,7 +24,7 @@
               color="accent"
               class="action-btn"
             >
-              About me
+              Обо мне
             </span>
           </transition>
         </div>
@@ -32,7 +32,7 @@
 
       <div id="main-content" class="main" :class="screen">
         <div class="summary_block large-margin">
-          <TitleBlock name="Summary 👨‍💻" />
+          <TitleBlock name="Кратко 👨‍💻" />
 
           <div class="d-flex justify-center gap-50">
             <div id="summary" class="d-flex flex-column justify-center">
@@ -41,8 +41,8 @@
               </h3>
 
               <p class="font-size-large">
-                <span class="emoji wave icon-size" />&nbsp; I'm <span class="info--text bold">{{ myExactAge }}</span>&nbsp; years old and I'm a front-end developer
-                with a taste for knowledge, work and study, with a strong sense of aesthetics and teamwork
+                <span class="emoji wave icon-size" />&nbsp; Мне <span class="info--text bold">{{ myExactAge }}</span>&nbsp; и я веб‑разработчик.
+                Люблю учиться, развиваться и делать понятные, эстетичные интерфейсы в команде.
               </p>
             </div>
 
@@ -58,22 +58,22 @@
         </div>
 
         <div id="skills" class="large-margin">
-          <TitleBlock name="🤹 Technical skills" class="mb-8" />
+          <TitleBlock name="🤹 Технические навыки" class="mb-8" />
 
           <div class="skills_block">
             <div class="d-flex justify-center flex-column align-center mb-8">
               <p class="text-title bold mb-12">
-                While working with web applications, I have worked with these technologies:
+                За время работы с веб‑приложениями я использовал такие технологии:
               </p>
 
               <ShadowRoundBtn
                 v-if="!showActivateBtn && (screen !== 'sm' && screen !== 'xs')"
-                btn-text="Click for fun"
+                btn-text="Нажми для фана"
                 @click="activateBomb()"
               />
               <ShadowRoundBtn
                 v-if="showActivateBtn && showResetBtn && (screen !== 'sm' && screen !== 'xs')"
-                btn-text="Reset"
+                btn-text="Сброс"
                 @click="reset()"
               />
             </div>
@@ -100,7 +100,7 @@
         </div>
 
         <div id="experience" class="large-margin">
-          <TitleBlock name="Working experience 🛠️" class="mb-8" />
+          <TitleBlock name="Опыт работы 🛠️" class="mb-8" />
 
           <v-timeline>
             <v-timeline-item
@@ -126,7 +126,7 @@
 
                 <div v-if="item.experience.responsibilities.length" class="font-size-large">
                   <p class="info--text">
-                    Responsibilities:
+                    Обязанности:
                   </p>
                   <ul class="responsibilities-list">
                     <li v-for="(responsibility, idx) in item.experience.responsibilities" :key="idx">
@@ -140,19 +140,19 @@
         </div>
 
         <div id="hobby" class="large-margin">
-          <TitleBlock name="🎯 Hobby" class="mb-8" />
+          <TitleBlock name="🎯 Хобби" class="mb-8" />
 
           <div class="hobby_block">
             <div class="items large-margin">
               <div class="items-col">
                 <h3 class="bold text-title">
-                  I independently develop automation devices, Smart home systems and some extraordinary devices.
+                  Я самостоятельно разрабатываю устройства автоматизации, системы “умного дома” и разные необычные девайсы.
                 </h3>
                 <h3 class="bold text-title">
-                  When developing, I use microcontrollers famalys: Atmel AVR (tinyAVR, megaAVR): RISC-V (ESP32/8266) and IoT
+                  Использую микроконтроллеры: Atmel AVR (tinyAVR, megaAVR), RISC‑V (ESP32/8266) и IoT.
                 </h3>
                 <h3 class="bold text-title">
-                  I program microcontrollers on C++ (with AVR-libs), js (used the Johnny-Five framework, executed in Node.js), used the "Mongoose OS" framework for ESP MC).
+                  Программирую микроконтроллеры на C++ (AVR‑libs) и JavaScript (Johnny‑Five/Node.js), использовал Mongoose OS для ESP.
                 </h3>
               </div>
 
@@ -168,17 +168,17 @@
 
             <div class="d-flex justify-center flex-column align-center">
               <h3 class="text-title info--text">
-                I also like to play chess <span class="icon-size">♛</span>. You can challenge me.
+                Ещё я люблю играть в шахматы <span class="icon-size">♛</span>. Можешь бросить вызов.
               </h3>
               <h3 class="text-title">
-                Link for invitation : <a class="info--text" href="https://chess.com/play/ban4ello" target="_blank">fight me in chess</a>
+                Ссылка для приглашения: <a class="info--text" href="https://chess.com/play/ban4ello" target="_blank">сыграть со мной</a>
               </h3>
             </div>
           </div>
         </div>
 
         <div id="contacts" class="large-margin">
-          <TitleBlock name="Contacts 📞" class="mb-8" />
+          <TitleBlock name="Контакты 📞" class="mb-8" />
 
           <div class="contacts_block">
             <a class="item link" href="mailto:ban4ellog@gmail.com" target="_blank">
@@ -190,13 +190,13 @@
             <a class="item link" href="https://github.com/ban4ello" target="_blank">
               <img width="100px" :src="require('~/assets/icons/github.png')">
               <h3 class="bold text-title">
-                Github
+                GitHub
               </h3>
             </a>
             <a class="item link" href="https://www.linkedin.com/in/ivan-miroshnichenko-36b003190/" target="_blank">
               <img width="100px" :src="require('~/assets/icons/linkedin.png')">
               <h3 class="bold text-title">
-                Linkedin
+                LinkedIn
               </h3>
             </a>
           </div>
@@ -208,7 +208,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'RuPage',
 
   data () {
     return {
@@ -216,52 +216,52 @@ export default {
       showExplode: false,
       showActivateBtn: false,
       showResetBtn: false,
-      myExactAge: '30 years',
+      myExactAge: '30 лет',
       technicalSkillsArray: [
         {
           imageName: 'javascript',
-          title: 'JavaScript (ES6+), TypeScript basics',
-          subtitle: 'modern frontend development'
+          title: 'JavaScript (ES6+), основы TypeScript',
+          subtitle: 'современная фронтенд‑разработка'
         },
         {
           imageName: 'html',
-          title: 'HTML5, CSS3, responsive UI',
-          subtitle: 'semantic markup and adaptive layouts'
+          title: 'HTML5, CSS3, адаптивная верстка',
+          subtitle: 'семантика и responsive‑интерфейсы'
         },
         {
           imageName: 'css3',
           title: 'Vue.js, Vue 3, Nuxt.js, Vite',
-          subtitle: 'dashboard UI, UX improvements, component architecture'
+          subtitle: 'архитектура компонентов, UX‑улучшения'
         },
         {
           imageName: 'vue',
           title: 'Node.js, Express, PostgreSQL',
-          subtitle: 'JWT auth, REST API, data isolation by PostgreSQL schemas'
+          subtitle: 'JWT, REST API, изоляция данных по схемам'
         },
         {
           imageName: 'api',
-          title: 'REST API, Swagger, file uploads',
-          subtitle: 'backend integration and API documentation'
+          title: 'REST API, Swagger, загрузка файлов',
+          subtitle: 'интеграция с backend и документация API'
         },
         {
           imageName: 'jest',
-          title: 'CI/CD collaboration and release support',
-          subtitle: 'PR workflow, code review, cross-functional teamwork'
+          title: 'Командная разработка и релизы',
+          subtitle: 'PR/CI, code review, взаимодействие с командой'
         },
         {
           imageName: 'webpack',
-          title: 'PM2 and operational scripts',
-          subtitle: 'migrations, backup/restore, deployment maintenance'
+          title: 'PM2 и эксплуатация',
+          subtitle: 'миграции, backup/restore, деплой'
         },
         {
           imageName: 'agile',
-          title: 'Agile delivery',
-          subtitle: 'close collaboration with backend, analysts and QA'
+          title: 'Agile',
+          subtitle: 'работа с backend, аналитиками и QA'
         },
         {
           imageName: 'git',
           title: 'Git',
-          subtitle: 'feature branches, pull requests, review-driven development'
+          subtitle: 'ветки, pull requests, code review'
         }
       ],
       experienceList: [
@@ -269,7 +269,7 @@ export default {
           color: 'disabled',
           year: 'mid 2018 - 2019',
           experience: {
-            title: 'Self-study of web technologies',
+            title: 'Самостоятельное изучение веб‑технологий',
             text: '',
             responsibilities: []
           }
@@ -279,11 +279,11 @@ export default {
           year: '2019 - 2020',
           experience: {
             title: 'WOK-email',
-            text: 'App for creating responsive HTML-email',
+            text: 'Приложение для создания адаптивных HTML‑писем.',
             responsibilities: [
-              'development of app interface using Vue.js and Element.io by Figma layouts',
-              'work on creating an internal library based on MJML',
-              'e2e testing with Cypress.io, unit testing with Jest'
+              'разработка интерфейса на Vue.js и Element.io по макетам Figma',
+              'работа над внутренней библиотекой на основе MJML',
+              'e2e‑тестирование Cypress, unit‑тестирование Jest'
             ]
           }
         },
@@ -292,10 +292,10 @@ export default {
           year: '2020 - sep 2020',
           experience: {
             title: '[noname] startup',
-            text: 'Application for learning foreign languages',
+            text: 'Приложение для изучения иностранных языков.',
             responsibilities: [
-              'development of an admin panel using Vue.js and Vuetify UI',
-              'bug fixing, project support'
+              'разработка админ‑панели на Vue.js + Vuetify',
+              'исправление багов и поддержка проекта'
             ]
           }
         },
@@ -304,13 +304,13 @@ export default {
           year: 'sep 2020 - oct 2022',
           experience: {
             title: 'EventScouts',
-            text: 'Decentralized app for searching events and activities using WEB 3.0',
+            text: 'Децентрализованное приложение для поиска событий (Web 3.0).',
             responsibilities: [
-              'development of app interface using Vue.js and Vuetify UI by Figma layouts',
-              'development of a decentralized app (according to the mobile first strategy)',
-              'optimization, implementation of new functions on Vue.js (development using the Scrum methodology)',
-              'evaluation and execution of threaded tasks',
-              'interaction with backend (REST API)'
+              'разработка интерфейса на Vue.js + Vuetify по макетам Figma',
+              'разработка mobile‑first',
+              'оптимизация и внедрение нового функционала (Scrum)',
+              'оценка и выполнение задач',
+              'интеграция с backend (REST API)'
             ]
           }
         },
@@ -319,13 +319,13 @@ export default {
           year: 'nov 2022 - sep 2023',
           experience: {
             title: 'Altessa Solutions',
-            text: 'Web, mobile & desktop app development, UI/UX design experts - professional solutions of your business',
+            text: 'Разработка web/mobile/desktop приложений.',
             responsibilities: [
-              'development of app interface using Vue.js by Figma layouts',
-              'optimization, implementation of new functions on Vue.js (Nuxt.js)',
-              'development using the Scrum methodology',
-              'evaluation and execution of threaded tasks',
-              'interaction with backend (gRPC API)'
+              'разработка интерфейса на Vue.js по макетам Figma',
+              'оптимизация и внедрение нового функционала (Nuxt.js)',
+              'разработка по Scrum',
+              'оценка и выполнение задач',
+              'интеграция с backend (gRPC API)'
             ]
           }
         },
@@ -334,27 +334,27 @@ export default {
           year: 'oct 2022 - current time',
           experience: {
             title: 'Manzana Group',
-            text: 'Management system for loyalty programs in retail, insurance, banking, healthcare and sports',
+            text: 'Enterprise‑решение для управления программами лояльности.',
             responsibilities: [
-              'development of app interface using Vue.js',
-              'optimization, implementation of new functions',
-              'development of internal UI library components',
+              'разработка интерфейсов на Vue.js',
+              'оптимизация и внедрение нового функционала',
+              'развитие внутренних UI‑компонентов',
               'code review',
-              'interaction with a large team of developers: backend (REST API), business analytics, QA engineers'
+              'взаимодействие с backend (REST API), аналитиками и QA'
             ]
           }
         },
         {
           color: 'info',
-          year: 'aug 2024 - current time',
+          year: 'Aug 2024 - current time',
           experience: {
             title: 'report-documentation',
-            text: 'Personal fullstack project built from architecture design to deployment.',
+            text: 'Личный fullstack‑проект: от архитектуры до разработки и деплоя.',
             responsibilities: [
-              'frontend on Vue 3/Vite (dashboard, calculations, data visualization, authentication)',
-              'backend on Node.js/Express + PostgreSQL (JWT, REST API, file uploads, Swagger docs)',
-              'data isolation by separate PostgreSQL schemas per user',
-              'operational setup with PM2, migrations and backup/restore scripts'
+              'frontend на Vue 3/Vite (dashboard, расчеты, визуализация, авторизация)',
+              'backend на Node.js/Express + PostgreSQL (JWT, REST API, загрузка файлов, Swagger)',
+              'изоляция данных пользователей через отдельные схемы PostgreSQL',
+              'настройка эксплуатации: PM2, миграции, backup/restore'
             ]
           }
         },
@@ -363,18 +363,18 @@ export default {
           year: 'jul 2025 - jan 2026',
           experience: {
             title: 'essaygrader-client',
-            text: 'Commercial EdTech frontend product development.',
+            text: 'Коммерческий EdTech frontend‑продукт.',
             responsibilities: [
-              'implementation and support of Vue.js features',
-              'UX and interface scenario improvements',
-              'work in PR/CI process and release support'
+              'реализация и поддержка функционала на Vue.js',
+              'улучшение UX и интерфейсных сценариев',
+              'работа через PR/CI и сопровождение релизов'
             ]
           }
         }
       ],
       typeValue: '',
       typeStatus: false,
-      displayTextArray: ['person who loves programming...', 'creator...', 'Web-app developer.'],
+      displayTextArray: ['человек, который любит программирование...', 'создатель...', 'Web‑app разработчик.'],
       typingSpeed: 90,
       erasingSpeed: 30,
       newTextDelay: 1500,
@@ -386,8 +386,8 @@ export default {
   },
 
   head () {
-    const title = 'Ivan Miroshnichenko. Frontend Web Developer'
-    const description = `I am Ivan. I'm ${new Date().getFullYear() - 1994} years old. And I really love developing software and electronic devices.`
+    const title = 'Иван Мирошниченко. Веб‑разработчик'
+    const description = `Иван. Веб‑разработчик.`
 
     return {
       title,
@@ -600,7 +600,8 @@ export default {
         dayDiff += daysInMonth[startDate.getMonth()]
       }
 
-      this.myExactAge = `${yearDiff} years, ${monthDiff} months, ${dayDiff} days, ${hours < 0 ? 0 : hours} hours : ${minutes < 0 ? 0 : minutes} minutes : ${seconds} seconds`
+      // Keeping the same live age format for consistency with design
+      this.myExactAge = `${yearDiff} лет, ${monthDiff} мес., ${dayDiff} дн., ${hours < 0 ? 0 : hours} ч : ${minutes < 0 ? 0 : minutes} мин : ${seconds} сек`
     },
 
     typeText () {
@@ -649,6 +650,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .grid-col {
   display: grid;
@@ -987,3 +989,4 @@ export default {
   text-decoration: none;
 }
 </style>
+
