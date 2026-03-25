@@ -1,12 +1,19 @@
 import colors from 'vuetify/es5/util/colors'
-const base = process.env.NODE_ENV === 'gh-pages' ? '/resume/' : '/'
+// const base = process.env.NODE_ENV === 'gh-pages' ? '/resume/' : '/'
 
 export default {
   router: {
-    base
+    base: '/'
   },
   build: {
-    publicPath: '/static/'
+    publicPath: '/static/',
+    extend (config) {
+      config.module.rules.push({
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
+      })
+    }
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -39,12 +46,17 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false
+    }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify'
   ],
@@ -60,7 +72,18 @@ export default {
         offset: -200
       }
     ],
-    '@nuxtjs/svg-sprite'
+    '@nuxtjs/svg-sprite',
+    [
+      '@rkaliev/nuxtjs-yandex-metrika',
+      {
+        id: '96067791',
+        webvisor: true
+        // clickmap: boolean,
+        // debug: boolean,
+        // noJS: boolean,
+        // disabled: boolean
+      }
+    ]
   ],
 
   svgSprite: {
