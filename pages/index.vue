@@ -390,6 +390,9 @@ export default {
     const description = `I am Ivan. I'm ${new Date().getFullYear() - 1994} years old. And I really love developing software and electronic devices.`
 
     return {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title,
       meta: [
         {

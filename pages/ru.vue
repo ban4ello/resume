@@ -267,7 +267,7 @@ export default {
       experienceList: [
         {
           color: 'disabled',
-          year: 'mid 2018 - 2019',
+          year: 'середина 2018 — 2019',
           experience: {
             title: 'Самостоятельное изучение веб‑технологий',
             text: '',
@@ -276,7 +276,7 @@ export default {
         },
         {
           color: 'info',
-          year: '2019 - 2020',
+          year: '2019 — 2020',
           experience: {
             title: 'WOK-email',
             text: 'Приложение для создания адаптивных HTML‑писем.',
@@ -289,7 +289,7 @@ export default {
         },
         {
           color: 'info',
-          year: '2020 - sep 2020',
+          year: '2020 — сен 2020',
           experience: {
             title: '[noname] startup',
             text: 'Приложение для изучения иностранных языков.',
@@ -301,7 +301,7 @@ export default {
         },
         {
           color: 'info',
-          year: 'sep 2020 - oct 2022',
+          year: 'сен 2020 — окт 2022',
           experience: {
             title: 'EventScouts',
             text: 'Децентрализованное приложение для поиска событий (Web 3.0).',
@@ -316,7 +316,7 @@ export default {
         },
         {
           color: 'info',
-          year: 'nov 2022 - sep 2023',
+          year: 'ноя 2022 — сен 2023',
           experience: {
             title: 'Altessa Solutions',
             text: 'Разработка web/mobile/desktop приложений.',
@@ -331,7 +331,7 @@ export default {
         },
         {
           color: 'info',
-          year: 'oct 2022 - current time',
+          year: 'окт 2022 — наст. время',
           experience: {
             title: 'Manzana Group',
             text: 'Enterprise‑решение для управления программами лояльности.',
@@ -346,7 +346,7 @@ export default {
         },
         {
           color: 'info',
-          year: 'Aug 2024 - current time',
+          year: 'авг 2024 — наст. время',
           experience: {
             title: 'report-documentation',
             text: 'Личный fullstack‑проект: от архитектуры до разработки и деплоя.',
@@ -360,7 +360,7 @@ export default {
         },
         {
           color: 'info',
-          year: 'jul 2025 - jan 2026',
+          year: 'июл 2025 — янв 2026',
           experience: {
             title: 'essaygrader-client',
             text: 'Коммерческий EdTech frontend‑продукт.',
@@ -387,9 +387,12 @@ export default {
 
   head () {
     const title = 'Иван Мирошниченко. Веб‑разработчик'
-    const description = `Иван. Веб‑разработчик.`
+    const description = `Я — Иван. Мне ${new Date().getFullYear() - 1994} лет. Люблю разработку ПО и электронику.`
 
     return {
+      htmlAttrs: {
+        lang: 'ru'
+      },
       title,
       meta: [
         {
