@@ -124,8 +124,8 @@
                     Responsibilities:
                   </p>
                   <ul class="responsibilities-list">
-                    <li v-for="(item, i) in item.experience.responsibilities" :key="i">
-                      {{ item }}
+                    <li v-for="(responsibility, idx) in item.experience.responsibilities" :key="idx">
+                      {{ responsibility }}
                     </li>
                   </ul>
                 </div>
@@ -215,48 +215,48 @@ export default {
       technicalSkillsArray: [
         {
           imageName: 'javascript',
-          title: 'JavaScript',
-          subtitle: 'its latest specifications'
+          title: 'JavaScript (ES6+), TypeScript basics',
+          subtitle: 'modern frontend development'
         },
         {
           imageName: 'html',
-          title: 'HTML',
-          subtitle: 'its latest specifications'
+          title: 'HTML5, CSS3, responsive UI',
+          subtitle: 'semantic markup and adaptive layouts'
         },
         {
           imageName: 'css3',
-          title: 'CSS, Vuetify, Bootstrap, Tailwind',
-          subtitle: 'SASS, LESS preprocessor'
+          title: 'Vue.js, Vue 3, Nuxt.js, Vite',
+          subtitle: 'dashboard UI, UX improvements, component architecture'
         },
         {
           imageName: 'vue',
-          title: 'VUE.JS, VUEX, NUXT.JS',
-          subtitle: 'because it is the best framework ever'
+          title: 'Node.js, Express, PostgreSQL',
+          subtitle: 'JWT auth, REST API, data isolation by PostgreSQL schemas'
         },
         {
           imageName: 'api',
-          title: 'REST API, gRPC, Swagger',
-          subtitle: ''
+          title: 'REST API, Swagger, file uploads',
+          subtitle: 'backend integration and API documentation'
         },
         {
           imageName: 'jest',
-          title: 'Unit, e2e testing',
-          subtitle: 'Jest, Cypress'
+          title: 'CI/CD collaboration and release support',
+          subtitle: 'PR workflow, code review, cross-functional teamwork'
         },
         {
           imageName: 'webpack',
-          title: 'Webpack, Vite.js',
-          subtitle: ''
+          title: 'PM2 and operational scripts',
+          subtitle: 'migrations, backup/restore, deployment maintenance'
         },
         {
           imageName: 'agile',
-          title: 'Agile methodology (SCRUM)',
-          subtitle: 'Jira, Trello, Figma'
+          title: 'Agile delivery',
+          subtitle: 'close collaboration with backend, analysts and QA'
         },
         {
           imageName: 'git',
-          title: 'GIT',
-          subtitle: 'where would we be without it in web development?'
+          title: 'Git',
+          subtitle: 'feature branches, pull requests, review-driven development'
         }
       ],
       experienceList: [
@@ -338,11 +338,38 @@ export default {
               'interaction with a large team of developers: backend (REST API), business analytics, QA engineers'
             ]
           }
+        },
+        {
+          color: 'info',
+          year: 'aug 2024 - current time',
+          experience: {
+            title: 'report-documentation',
+            text: 'Personal fullstack project built from architecture design to deployment.',
+            responsibilities: [
+              'frontend on Vue 3/Vite (dashboard, calculations, data visualization, authentication)',
+              'backend on Node.js/Express + PostgreSQL (JWT, REST API, file uploads, Swagger docs)',
+              'data isolation by separate PostgreSQL schemas per user',
+              'operational setup with PM2, migrations and backup/restore scripts'
+            ]
+          }
+        },
+        {
+          color: 'info',
+          year: 'jul 2025 - jan 2026',
+          experience: {
+            title: 'essaygrader-client',
+            text: 'Commercial EdTech frontend product development.',
+            responsibilities: [
+              'implementation and support of Vue.js features',
+              'UX and interface scenario improvements',
+              'work in PR/CI process and release support'
+            ]
+          }
         }
       ],
       typeValue: '',
       typeStatus: false,
-      displayTextArray: ['person who loves programming...', 'creator...', 'Vue frontend developer.'],
+      displayTextArray: ['person who loves programming...', 'creator...', 'Web-app developer.'],
       typingSpeed: 90,
       erasingSpeed: 30,
       newTextDelay: 1500,
